@@ -25,7 +25,5 @@ void main(List<String> arguments) async {
   hubConnection.on("BidAccepted", (arguments) => print(arguments));
   hubConnection.on("ErrorOccurred", (arguments) => print(arguments));
 
-  hubConnection.onclose(
-    ({error}) => print("Connection Closed"),
-  );
+  hubConnection.onclose(({error}) => print("Connection Closed"));
 }
